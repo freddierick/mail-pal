@@ -1,0 +1,20 @@
+<a href="../dashboard">Go Back</a>
+<table border = "1">
+    <tr>
+        <td>Time</td>
+        <td>Data</td>
+     </tr>
+     
+    <%post.forEach(element => {%>
+        
+        <tr>
+            <td><%=element.time%></td>
+            <%Object.keys(element.data).forEach(thing => {%>
+                <td><%=element.data[thing]%></td>
+            <%})%>
+        </tr>
+    <%})%>
+    
+    </table>
+    
+ 
