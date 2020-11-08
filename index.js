@@ -125,6 +125,8 @@ app.get('/login', function (req, res) {
 
   app.post('/', async function (req, res) {
     const postMailID = req.body.postMailID;
+    console.log(req.body)
+    if (!postMailID) return res.status(400).send()
     const data = await client.schema.postBox.findOne({_id: postMailID})
     if (!data) return res.send("no post box found!")
     delete req.body.postMailID;
