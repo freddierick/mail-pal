@@ -16,6 +16,7 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 const sendMail = require("./mail.js")
+
 const login = require("./login.js")
 client.schema = {
     users: require("./mongo/users.js"),
