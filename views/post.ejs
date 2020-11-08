@@ -15,7 +15,7 @@
     <%post.forEach(element => {%>
         
         <tr>
-            <%if(element) {%>
+            <%if(element.data) {%>
             <td><%=element.time%></td>
             <%Object.keys(element.data).forEach(thing => {%>
                 <td><%=element.data[thing]%></td>
